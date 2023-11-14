@@ -19,4 +19,14 @@ export class AppController {
   nonBlocking(): Promise<string> {
     return this.appService.nonBlocking();
   }
+
+  @Get('promises')
+  promises(): Promise<string[]> {
+    return this.appService.promises();
+  }
+
+  @Get('promises-parallel')
+  promisesParallel(): Promise<string[]> {
+    return this.appService.promisesParallel();
+  }
 }
